@@ -7,9 +7,17 @@
 <ion-content [fullscreen]="true">
 <!-- Página que muestra mensaje de bienvenida y botones
   para leer QR y cerrar sesión -->
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">inicio</ion-title>
+      <ion-title>Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  
+  <ion-content>
+    <ion-text>Bienvenido, {{ nombreUsuario }}</ion-text>
+  
+    <ion-button expand="full" routerLink="/miclase">Leer QR</ion-button>
+    <ion-button expand="full" (click)="subirArchivo()">Subir Archivo QR</ion-button>
+    <ion-button expand="full" routerLink="/ingreso">Cerrar Sesión</ion-button>
+  </ion-content>
+  

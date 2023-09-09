@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ingreso.page.html',
   styleUrls: ['./ingreso.page.scss'],
 })
-export class IngresoPage implements OnInit {
+export class IngresoPage {
+  public correo = '';
+  public contrasena = '';
 
-  constructor() { }
-
-  ngOnInit() {
+  iniciarSesion() {
+    // Aquí puedes agregar la lógica de autenticación
+    // Por ejemplo, comparar correo y contraseña con datos en la base de datos
+    // Si la autenticación es exitosa, puedes navegar a la página de inicio.
   }
-
 }

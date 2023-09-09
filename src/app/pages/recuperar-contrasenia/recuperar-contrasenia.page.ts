@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './recuperar-contrasenia.page.html',
   styleUrls: ['./recuperar-contrasenia.page.scss'],
 })
-export class RecuperarContraseniaPage implements OnInit {
+export class RecuperarContraseniaPage {
+  public correo = '';
 
-  constructor() { }
-
-  ngOnInit() {
+  recuperarContrasena() {
+    // Aquí puedes enviar un correo de recuperación de contraseña al correo proporcionado.
   }
 
 }

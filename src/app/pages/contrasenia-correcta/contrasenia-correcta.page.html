@@ -1,15 +1,16 @@
 <!-- Página que muestra mensaje de éxito junto a contraseña cuando 
   la respuesta a pregunta secreta es correcta -->
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>contrasenia-correcta</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">contrasenia-correcta</ion-title>
+      <ion-title>Respuesta Correcta</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+  
+  <ion-content>
+    <ion-text color="success">¡Respuesta Correcta!</ion-text>
+    <ion-item>
+      <ion-label>Contraseña</ion-label>
+      <ion-text>{{ contrasena }}</ion-text>
+    </ion-item>
+  </ion-content>
+  

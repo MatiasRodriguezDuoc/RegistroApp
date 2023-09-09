@@ -1,5 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { IngresoPage } from './pages/ingreso/ingreso.page';
+import { InicioPage } from './pages/inicio/inicio.page';
+import { PreguntaSecretaPage } from './pages/pregunta-secreta/pregunta-secreta.page';
+import { RecuperarContraseniaPage } from './pages/recuperar-contrasenia/recuperar-contrasenia.page';
+import { ContraseniaCorrectaPage } from './pages/contrasenia-correcta/contrasenia-correcta.page';
+import { ContraseniaIncorrectaPage } from './pages/contrasenia-incorrecta/contrasenia-incorrecta.page';
+
 
 const routes: Routes = [
   {
@@ -10,17 +17,14 @@ const routes: Routes = [
   {
     path: 'ingreso',
     loadChildren: () => import('./pages/ingreso/ingreso.module').then( m => m.IngresoPageModule)
-  },  {
+  },
+  {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
     path: 'pregunta-secreta',
     loadChildren: () => import('./pages/pregunta-secreta/pregunta-secreta.module').then( m => m.PreguntaSecretaPageModule)
-  },
-  {
-    path: 'miclase',
-    loadChildren: () => import('./pages/miclase/miclase.module').then( m => m.MiclasePageModule)
   },
   {
     path: 'contrasenia-correcta',

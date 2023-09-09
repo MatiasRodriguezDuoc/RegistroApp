@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pregunta-secreta.page.html',
   styleUrls: ['./pregunta-secreta.page.scss'],
 })
-export class PreguntaSecretaPage implements OnInit {
+export class PreguntaSecretaPage {
+  preguntaSecreta = '¿Cuál es tu color favorito?';
+  public respuesta = '';
 
-  constructor() { }
-
-  ngOnInit() {
+  verificarRespuesta() {
+    // Aquí puedes comparar la respuesta proporcionada con la respuesta correcta del usuario.
+    // Si la respuesta es correcta, puedes navegar a la página 'Correcto', de lo contrario a 'Incorrecto'.
   }
 
 }

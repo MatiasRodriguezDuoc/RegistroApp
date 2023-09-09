@@ -14,6 +14,26 @@ const routes: Routes = [
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
   },
+  {
+    path: 'pregunta-secreta',
+    loadChildren: () => import('./pages/pregunta-secreta/pregunta-secreta.module').then( m => m.PreguntaSecretaPageModule)
+  },
+  {
+    path: 'miclase',
+    loadChildren: () => import('./pages/miclase/miclase.module').then( m => m.MiclasePageModule)
+  },
+  {
+    path: 'contrasenia-correcta',
+    loadChildren: () => import('./pages/contrasenia-correcta/contrasenia-correcta.module').then( m => m.ContraseniaCorrectaPageModule)
+  },
+  {
+    path: 'contrasenia-incorrecta',
+    loadChildren: () => import('./pages/contrasenia-incorrecta/contrasenia-incorrecta.module').then( m => m.ContraseniaIncorrectaPageModule)
+  },
+  {
+    path: 'recuperar-contrasenia',
+    loadChildren: () => import('./pages/recuperar-contrasenia/recuperar-contrasenia.module').then( m => m.RecuperarContraseniaPageModule)
+  },
 
 ];
 

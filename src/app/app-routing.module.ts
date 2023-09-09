@@ -4,7 +4,6 @@ import { IngresoPage } from './pages/ingreso/ingreso.page';
 import { InicioPage } from './pages/inicio/inicio.page';
 import { PreguntaSecretaPage } from './pages/pregunta-secreta/pregunta-secreta.page';
 import { RecuperarContraseniaPage } from './pages/recuperar-contrasenia/recuperar-contrasenia.page';
-import { ContraseniaCorrectaPage } from './pages/contrasenia-correcta/contrasenia-correcta.page';
 import { ContraseniaIncorrectaPage } from './pages/contrasenia-incorrecta/contrasenia-incorrecta.page';
 
 
@@ -25,10 +24,6 @@ const routes: Routes = [
   {
     path: 'pregunta-secreta',
     loadChildren: () => import('./pages/pregunta-secreta/pregunta-secreta.module').then( m => m.PreguntaSecretaPageModule)
-  },
-  {
-    path: 'contrasenia-correcta',
-    loadChildren: () => import('./pages/contrasenia-correcta/contrasenia-correcta.module').then( m => m.ContraseniaCorrectaPageModule)
   },
   {
     path: 'contrasenia-incorrecta',

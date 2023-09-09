@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Usuario } from 'src/app/model/usuario';
+
 
 @Component({
   selector: 'app-ingreso',
@@ -17,6 +19,10 @@ export class IngresoPage {
       correo: 'franco@duocuc.cl',
       contrasena: '1234',
       nombre: 'Franco',
+      apellido: 'Unda',
+      preguntaSecreta: '¿Prefieres perros o gatos?',
+      respuestaCorrecta: 'perros',
+      respuestaIncorrecta: 'gatos'
     },
     {
       correo: 'francisco@profesor.cl',
@@ -48,4 +54,33 @@ export class IngresoPage {
     
     }
   }
+
+  async recuperarContrasena() {
+    const usuarioEncontrado = this.usuarios.find(
+      (usuario) => usuario.correo === this.correo
+    );
+    
+    if (usuarioEncontrado) {
+      // Redirigir a la página de pregunta-secreta con el objeto usuario y pregunta secreta como parámetros en el estado
+      this.router.navigate(['/pregunta-secreta'],{
+        state: {usuario: usuarioEncontrado}
+      });
+    } else {
+      // Correo no encontrado, mostrar mensaje de error
+      this.mostrarToast('Correo no encontrado.');
+    }
+
+  }
+
+  async mostrarToast (mensaje: string) {
+    const toast = await this.toastController.create ({
+      message: mensaje,
+      duration: 2000,
+      position: 'middle',
+    });
+
+    toast.present();
+
+  }
+
 }

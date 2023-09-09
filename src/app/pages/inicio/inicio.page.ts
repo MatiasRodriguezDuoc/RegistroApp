@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-
-
+import {Filesystem} from '@capacitor/filesystem'
+import { Camera, CameraResultType } from '@capacitor/camera';
+import { Capacitor } from '@capacitor/core';
 
 @Component({
   selector: 'app-inicio',
@@ -20,13 +20,34 @@ export class InicioPage {
   }
 
 
-  abrirCamara() {
-    // Aquí puedes implementar la lógica para abrir la cámara y leer un QR
-    // Esto puede involucrar el uso de plugins o librerías externas.
+  async abrirCamara() {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.DataUrl,
+    });
   }
 
-  subirArchivo() {
-    // Aquí puedes implementar la lógica para subir un archivo QR y procesarlo.
+  async subirArchivo() {
+     const fileInput = document.createElement('input');
+     fileInput.setAttribute('type', 'file');
+     fileInput.setAttribute('accept', 'image/*');
+
+    fileInput.addEventListener('change', async () => {
+      if (fileInput.files && fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+
+        reader.onload = async (e) => {
+          if (e.target) {
+            const dataUrl = e.target.result as string;
+          }
+        };
+
+        reader.readAsDataURL(file);
+      }
+    });
+    fileInput.click();
   }
 
 }

@@ -3,7 +3,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { IngresoPage } from './pages/ingreso/ingreso.page';
 import { InicioPage } from './pages/inicio/inicio.page';
 import { PreguntaSecretaPage } from './pages/pregunta-secreta/pregunta-secreta.page';
-import { RecuperarContraseniaPage } from './pages/recuperar-contrasenia/recuperar-contrasenia.page';
 import { ContraseniaIncorrectaPage } from './pages/contrasenia-incorrecta/contrasenia-incorrecta.page';
 
 

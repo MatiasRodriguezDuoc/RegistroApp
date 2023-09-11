@@ -1,40 +1,43 @@
+<!-- Página de inicio de sesión con correo y contraseña -->
 <ion-header [translucent]="true">
   <ion-toolbar color="medium">
     <ion-title class="ion-text-center">INICIO</ion-title>
     <ion-progress-bar type="indeterminate"></ion-progress-bar>
   </ion-toolbar>
- 
 </ion-header>
 
-<ion-card color="light"> 
-  <ion-card-header>
-  <ion-card-title class="ion-text-center">Bienvenido, {{ nombreUsuario }}</ion-card-title>
-  
+<ion-content class="background" [fullscreen]="true">
+
+  <ion-card color="light">
+    <ion-card-header>
+
+    
     <img alt="DUOC UC" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/711px-Logo_DuocUC.svg.png" />
-  </ion-card-header>
-   <!-- Página que muestra mensaje de bienvenida y botones
-  para leer QR y cerrar sesión -->
-  
-    <ion-button expand="full" routerLink="/miclase">Leer QR</ion-button>
-    <ion-button expand="full" (click)="subirArchivo()">Subir Archivo QR</ion-button>
-    <ion-button expand="full" routerLink="/ingreso">Cerrar Sesión</ion-button>
-  
-  
+    </ion-card-header>
 
-</ion-card>
+  </ion-card>
+
+  <ion-card color="light">
+    <ion-title class="ion-text-center">Bienvenido, {{ nombreUsuario }}</ion-title>
+  </ion-card>
 
 
-<ion-footer>
-  <ion-toolbar>
+  <ion-card color="light">
+   <ion-title class="ion-text-center">RegistroApp DuocUC</ion-title>
+   <ion-button expand="full" (click)="abrirCamara()">Leer QR</ion-button>
+   <ion-button expand="full" (click)="subirArchivo()">Subir Archivo QR</ion-button>
+   <ion-button expand="full" routerLink="/ingreso">Cerrar Sesión</ion-button>
+  
+
+  </ion-card>
+
+
+</ion-content>
+
+<ion-footer >
+  <ion-toolbar color="medium">
     <ion-title class="ion-text-center">2023</ion-title>
   </ion-toolbar>
 </ion-footer>
 
-    
-    
-      
-    
-    
-        
-    
-        
+

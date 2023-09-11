@@ -32,6 +32,10 @@ const routes: Routes = [
     path: 'recuperar-contrasenia',
     loadChildren: () => import('./pages/recuperar-contrasenia/recuperar-contrasenia.module').then( m => m.RecuperarContraseniaPageModule)
   },
+  {
+    path: 'miclase',
+    loadChildren: () => import('./pages/miclase/miclase.module').then( m => m.MiclasePageModule)
+  },
 
 ];
 

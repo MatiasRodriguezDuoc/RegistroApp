@@ -29,16 +29,19 @@ export class IngresoPage {
       contrasena: 'duoc123',
       nombre: 'Francisco',
     },
+
     {
       correo: 'mati@duocuc.cl',
       contrasena: '1234',
       nombre: 'Matias',
       apellido: 'Rodriguez',
-      preguntaSecreta: '¿Prefieres auto o moto?',
-      respuestaCorrecta: 'auto',
-      respuestaIncorrecta: 'moto'
-    },
-    
+      preguntaSecreta: '¿Prefieres Autos o Motos?',
+      respuestaCorrecta: 'Motos',
+      respuestaIncorrecta: 'gatos'
+    }
+
+
+
   ];
 
   constructor (private router: Router, private toastController: ToastController) {}
@@ -94,3 +97,4 @@ export class IngresoPage {
   }
 
 }
+
